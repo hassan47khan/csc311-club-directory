@@ -1,0 +1,4 @@
+# Tests use a throwaway in-memory database, so they never touch ./data and can run while the app is running.
+spring:
+  datasource:
+    url: jdbc:derby:memory:clubs-test;create=true

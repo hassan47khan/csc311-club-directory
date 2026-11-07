@@ -47,7 +47,7 @@
       for (const club of clubs) {
         const li = document.createElement("li");
         li.textContent = club.name + " – " + club.category + ", " + club.meetingDay
-                       + (club.room ? ", " + club.room : "");
+                + (club.room ? ", " + club.room : "");
         list.appendChild(li);
       }
     }
@@ -71,7 +71,7 @@
         loadClubs();
       } else {
         document.getElementById("message").textContent =
-            "Please fill in name, category and meeting day.";
+                "Please fill in name, category and meeting day.";
       }
     });
 

@@ -8,6 +8,12 @@ spring:
       ddl-auto: update
     show-sql: true
     open-in-view: false
+    properties:
+      # Derby has no createNClob; without this Hibernate's startup probe gets a pooled connection thrown away.
+      hibernate.jdbc.lob.non_contextual_creation: true
+  mvc:
+    problemdetails:
+      enabled: true
 
 server:
   port: 8085
